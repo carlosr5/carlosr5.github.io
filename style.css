@@ -1,61 +1,60 @@
-*,
-*::after,
-*::before {
-  padding: 0;
+html,
+body {
+  background-color: #add8e6;
   margin: 0;
-  box-sizing: border-box;
+  padding: 0;
 }
 
-#main {
-  height: 100%;
-  width: 100%;
-  background-color: #2D2D2D;
+#page-content {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-#title {
-  font-family: Times 'Times New Roman', Times, serif;
-  text-align: center;
-  text-shadow: 2px 2px 5px;
-  margin: auto;
+#header {
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid gray;
 }
 
-#text-container {
-  margin: auto;
-  width: 80%;
-  background-color: #FFDD63;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+#personal-info-row {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid grey;
 }
 
-#img-caption {
-  width: 80vw;
+#personal-info-row #favs {
+  width: 450px;
+  float: left;
 }
 
-#image {
-  height: 410px;
-  width: 800px;
-  display: flex;
-  margin: auto;
-  border-color: black;
-  border-width: 3px;
-  border-style: solid;
-  border-radius: 3%;
+#personal-info-row #courses {
+  width: 450px;
+  float: left;
 }
 
-#img-caption {
-  text-align: center;
+#links {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#tribute-info {
-  margin: 0 5%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+#links .class-links {
+  width: 450px;
+  float: left;
 }
 
-/* @keyframes grace_go_brr {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-} */
+#fav-color {
+  color: blue;
+}
+
+.clear-float {
+  clear: both;
+}
