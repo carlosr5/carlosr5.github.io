@@ -1,0 +1,67 @@
+img {
+  width: 100%;
+}
+h2 {
+  font-family: sans-serif;
+}
+body {
+  background-color: beige;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#header {
+  color: white;
+  text-align: center;
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: xx-large;
+  padding: 120px;
+
+  background-image: url(./images/yarn-shelf.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main-font {
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+#secondary-font {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#footer {
+  background-color: black;
+  color: #fefefe;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.brand-font {
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+.home-col {
+  background-color: beige;
+  /* border: 1px solid black; */
+  text-align: center;
+}
+
+.home-row {
+  /* border: 1px solid black; */
+  margin: 10px;
+}
+
+.team-col {
+  background-color: beige;
+  /* border: 1px solid black; */
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* 
+.team-row {
+  margin: 10px;
+} */
