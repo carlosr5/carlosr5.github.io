@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    #movies-list {
+        width: 500px;
+        margin: 5px;
+        padding: 10px;
+        border: 2px solid pink;
+    }
+
+    .container #movies-list .highlight {
+        color: orange;
+    }
+
+    #movies-list .highlight {
+        color: blue;
+    }
+
+    .highlight {
+        color: yellow;
+    }
+
+    .about {
+        width: 800px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .footer {
+        width: 50%;
+    }
+
+    #dot {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    #container:hover #dot {
+        opacity: 50%;
+    }
+
+    #center-me {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Come back to this one */
+    #container .box {
+        background-color: #55cdff;
+        position: relative;
+        display: block;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="movies-list">
+            <h2>Latest Movies</h2>
+            <ul>
+                <li>House of Gucci</li>
+                <li class="highlight">Encanto</li>
+                <li>Uncharted</li>
+            </ul>
+        </div>
+        <div class="about">
+            Welcome to our website! We provide the latest and greatest reviews of all movies.
+        </div>
+        <div class="footer">
+            Copyright 2022.
+        </div>
+    </div>
+</body>
+
+<script>
+    console.log(4 + "2");
+    console.log(document.querySelector("ul").children);
+
+    document.querySelector("#save-btn").onclick = function () {
+        localStorage.setItem("dog", "Fluffy");
+    }
+
+    document.querySelector("#get-btn").onclick = function () {
+        let dogName = localStorage.getItem("dog");
+
+        console.log(dogName);
+    }
+
+    document.querySelector("#registration-form").onsubmit = function () {
+        let username = document.querySelector("#username").value;
+        console.log(username);
+    }
+
+    /* NOTE: TEST THE FOLLOWING 4 */
+    document.querySelector("#link").onclick = function () {
+        this.setAttribute("href", "https://www.usc.edu");
+    }
+
+    $("#link").on("click", function () {
+        $(this).attr("href", "https://www.usc.edu");
+    });
+
+    document.querySelector("#link").setAttribute("data-school", "USC");
+
+    $("#link").attr("data-school", "USC");
+
+    function displayResults(response) {
+        // Parsing response string, storing data into separate array
+        let resultsObj = JSON.parse(response);
+        let dataArr = resultsObj.data;
+
+        dataArr.forEach(pokemon => {
+
+            // Making string for types
+            let types = "";
+            pokemon.types.forEach(type => {
+                types += ` ${type}`;
+            });
+
+            // Using jQuery to create elements
+            let pokemonHTMLStr = `<div>
+  <strong>${pokemon.id} ${pokemon.name}${types}</strong>
+  <img src=${pokemon.image_url} >
+</div>`;
+
+            // Appending new div to the parent div
+            document.querySelector("#pokemon-container").innerHTML += pokemonHTMLStr;
+        });
+    }
+</script>
+
+</html>

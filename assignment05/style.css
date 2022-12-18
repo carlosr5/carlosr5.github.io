@@ -1,0 +1,38 @@
+#movie-row {
+  text-align: center;
+}
+
+.movie-poster {
+  background-color: rgb(33, 37, 41);
+  position: relative;
+}
+
+.movie-poster .overlay {
+  display: none;
+}
+
+.movie-poster:hover .overlay {
+  display: block;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.452);
+  width: 100%;
+  padding: 10px;
+}
+
+.movie-poster .overlay .rating {
+  margin-bottom: 10px;
+}
+
+img {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+#num-movies {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

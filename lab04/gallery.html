@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4 - Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Write your CSS here. Do NOT modify the external style.css file or the HTML on this file, */
+        .thumbnail {
+            position: relative;
+        }
+
+        .thumbnail .overlay {
+            display: none;
+        }
+
+        .thumbnail:hover .overlay {
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.452);
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Places to Visit</h1>
+        <div class="thumbnail-container">
+            <div class="thumbnail">
+                <img src="images/joshua-tree.jpeg" alt="Joshua Tree" />
+                <div class="overlay">
+                    <h2>Joshua Tree</h2>
+                </div>
+            </div>
+            <div class="thumbnail">
+                <img src="images/death-valley.jpeg" alt="Death Valley" />
+                <div class="overlay">
+                    <h2>Death Valley</h2>
+                </div>
+            </div>
+            <div class="thumbnail">
+                <img src="images/yosemite.jpeg" alt="Yosemite" />
+                <div class="overlay">
+                    <h2>Yosemite</h2>
+                </div>
+            </div>
+            <div class="thumbnail">
+                <img src="images/zion.jpeg" alt="Zion" />
+                <div class="overlay">
+                    <h2>Zion</h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="main-img-container">
+            <img id="main-img" src="images/joshua-tree.jpeg" alt="Joshua Tree" />
+            <p id="caption">Joshua Tree</p>
+        </div>
+    </div>
+
+    <script>
+        // Write your JS here
+        let thumbnails = document.querySelectorAll(".thumbnail");
+
+        console.log(thumbnails);
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.onclick = function () {
+                // Storing all the child nodes in a var
+                let childNodes = this.childNodes;
+
+                childNodes.forEach(node => {
+                    // Only images have alt tags from what I know, so we'll use this as an indicator that we've encountered an image tag
+                    if (node.alt) {
+                        // First, change the image
+                        document.querySelector("#main-img").src = node.src;
+
+                        // Now, change the alt
+                        document.querySelector("#main-img").alt = node.alt;
+
+                        // Finally, update the caption
+                        document.querySelector("#caption").innerHTML = node.alt;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

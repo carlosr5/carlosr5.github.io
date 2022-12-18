@@ -1,0 +1,42 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.elements {
+  background-color: rgb(29, 212, 212);
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.elements:hover {
+  background-color: blue;
+}
+
+#parent {
+  background-color: rgb(29, 212, 212);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .elements {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .elements {
+    width: 15%;
+  }
+}

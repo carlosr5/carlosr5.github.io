@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    display: block;
+}
+.container {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial;
+}
+.container h1 {
+    text-align: center;
+}
+.thumbnail-container {
+    display: flex;
+}
+.thumbnail-container .thumbnail {
+    width: 25%;
+    margin: 10px;
+}
+.thumbnail .overlay h2 {
+    text-align: center;
+    
+}
+#main-img-container {
+    width: 650px;
+    padding: 20px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: darksalmon;
+}
+#main-img-container p {
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+}
